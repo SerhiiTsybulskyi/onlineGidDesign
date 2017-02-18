@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>OnlineGid</title>
+
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--<link rel="stylesheet" href="node_modules/nouislider/distribute/nouislider.css">-->
+  <link rel="stylesheet" href="node_modules/materialize-css/extras/noUiSlider/nouislider.css">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css"
+        media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="css/main.css" media="screen,projection"/>
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link rel="stylesheet" href="node_modules/jquery-bar-rating/dist/themes/fontawesome-stars.css">
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.js"></script>
+  <script type="text/javascript" src="node_modules/materialize-css/extras/noUiSlider/nouislider.js"></script>
+  <script type="text/javascript" src="node_modules/wnumb/wNumb.js"></script>
+  <!--<script type="text/javascript" src="node_modules/nouislider/distribute/nouislider.js"></script>-->
+
+  <script src="node_modules/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+</head>
+<body>
+<div class="navbar-fixed">
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper full-container">
+      <a id="logo-container" href="#" class="brand-logo">OnlineGid</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a><i class="material-icons">search</i></a></li>
+        <li><a href="#"><i class="material-icons">view_module</i></a></li>
+        <li><a href="#" class=""><i class="material-icons">more_vert</i></a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+        <li><a href="#">Navbar Link</a></li>
+        <li><a href="#">Navbar Link</a></li>
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+</div>
+
+
+<div id="index-banner">
+  <div class="carousel carousel-slider center" data-indicators="true" style="height: 500px">
+    <div class="carousel-fixed-item center">
+      <a class="waves-effect waves-light btn-large"><i class="material-icons right">play_circle_outline</i>Смотреть</a>
+    </div>
+    <div class="carousel-item red white-text" href="#one!"
+         style="background: url(filmz.ru_f_234149.jpg) no-repeat; background-size: cover">
+      <div class="wrapper container">
+        <h2 class="valign" style="font-size: 48px">Стражи Галактики. Часть 2</h2>
+      </div>
+    </div>
+    <div class="carousel-item amber white-text" href="#two!">
+      <h2>Second Panel</h2>
+      <div class="white-text">This is your second panel</div>
+    </div>
+    <div class="carousel-item green white-text" href="#three!">
+      <h2>Third Panel</h2>
+      <div class="white-text">This is your third panel</div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <h2 class="center-align teal-text">В тренде</h2>
+  <div class="row">
+    <div class="col s12 m2 center-align">
+      <img src="https://www.kinopoisk.ru/images/film_big/470689.jpg" height="300px">
+      <h5>Пассажиры</h5>
+    </div>
+    <div class="col s12 m2 center-align">
+      <img src="https://www.kinopoisk.ru/images/film_big/690615.jpg" height="300px">
+      <h5>Кредо убийцы</h5>
+    </div>
+    <div class="col s12 m2 center-align">
+      <img src="https://st.kp.yandex.net/images/film_iphone/iphone360_611822.jpg" height="300px">
+      <h5>Великая стена</h5>
+    </div>
+    <div class="col s12 m2 center-align">
+      <img src="https://www.kinopoisk.ru/images/film_big/821008.jpg" height="300px">
+      <h5>Зверопой</h5>
+    </div>
+    <div class="col s12 m2 center-align">
+      <img src="https://www.kinopoisk.ru/images/film_big/871820.jpg" height="300px">
+      <h5>БайБайМэн</h5>
+    </div>
+    <div class="col s12 m2 center-align">
+      <img src="https://www.kinopoisk.ru/images/film_big/764527.jpg" height="300px">
+      <h5>Ловушка</h5>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="full-container ">
+  <div class="row">
+    <h3 class="center-align teal-text">Новинки кино</h3>
+    <div class="col s5 m5 l3 filters">
+      <ul class="collapsible" data-collapsible="expandable">
+        <li>
+          <div class="collapsible-header active"><i class="material-icons">place</i>Рейтинг</div>
+          <div class="collapsible-body">
+            <div class="row wrapper range-filters">
+              <div id="range-rating"></div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header active"><i class="material-icons">place</i>По годам</div>
+          <div class="collapsible-body">
+            <div class="row wrapper range-filters">
+              <div id="range-years"></div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header active"><i class="material-icons">filter_drama</i>Категории</div>
+          <div class="collapsible-body">
+            <ul class="list categories">
+              <li>
+                <input type="checkbox" id="cat1"/>
+                <label for="cat1">Биографии</label>
+              </li>
+              <li>
+                <input type="checkbox" id="cat2"/>
+                <label for="cat2">Боевики</label>
+              </li>
+              <li>
+                <input type="checkbox" id="cat3"/>
+                <label for="cat3">Военные</label>
+              </li>
+              <li>
+                <input type="checkbox" id="cat4"/>
+                <label for="cat4">Вестерны</label>
+              </li>
+              <li>
+                <input type="checkbox" id="cat5"/>
+                <label for="cat5">Фэнтези</label>
+              </li>
+              <li>
+                <input type="checkbox" id="cat6"/>
+                <label for="cat6">Фантастика</label>
+              </li>
+              <li>
+                <input type="checkbox" id="cat7"/>
+                <label for="cat7">Мультфильмы</label>
+              </li>
+              <li>
+                <input type="checkbox" id="cat8"/>
+                <label for="cat8">Документальные</label>
+              </li>
+              <li>
+                <input type="checkbox" id="cat9"/>
+                <label for="cat9">Исторические</label>
+              </li>
+              <li>
+                <input type="checkbox" id="cat10"/>
+                <label for="cat10">Комедии</label>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header active"><i class="material-icons">whatshot</i>По странам</div>
+          <div class="collapsible-body">
+            <ul class="list countries">
+              <li>
+                <input type="checkbox" id="country1"/>
+                <label for="country1">Американские</label>
+              </li>
+              <li>
+                <input type="checkbox" id="country2"/>
+                <label for="country2">Британские</label>
+              </li>
+              <li>
+                <input type="checkbox" id="country3"/>
+                <label for="country3">Российские</label>
+              </li>
+              <li>
+                <input type="checkbox" id="country4"/>
+                <label for="country4">Индийские</label>
+              </li>
+              <li>
+                <input type="checkbox" id="country5"/>
+                <label for="country5">Немецкие</label>
+              </li>
+              <li>
+                <input type="checkbox" id="country6"/>
+                <label for="country6">Французские</label>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <button class="btn waves-effect waves-light left" type="submit" name="action">Случайно
+        <i class="material-icons right">youtube_searched_for</i>
+      </button>
+      <button class="btn waves-effect waves-light right" type="submit" name="action">Применить
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
+    <div class="col s7 m7 l9">
+      <div class="section">
+        <div class="new-films">
+          <div class="row wrapper">
+          <div class="col s12 m2">
+            <div class="card">
+              <div class="br-theme-fontawesome-stars">
+                <select class="rating">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+              <div class="card-image">
+
+
+                <img src="http://www.kinonews.ru/insimgs/2016/poster/poster68549_1.jpg">
+                <span class="card-title"></span>
+              </div>
+              <div class="card-content">
+                <p class="description">Ксандер Кейдж спустя годы возвращается из добровольного изгнания и попадает в
+                  безумный водоворот
+                  событий. Он собирает команду безбашенных экстремалов, вместе с которыми ему предстоит найти
+                  мощнейшее секретное оружие — «Ящик Пандоры». Действовать нужно быстро: за разработкой охотятся
+                  опасные головорезы. Ставки в смертельной игре повышаются, когда выясняется, что мировые
+                  правительства вовлечены в кровавый заговор.</p>
+              </div>
+              <div class="card-action">
+                <a href="#" class="valign-wrapper">
+                  <span class="valign">Три икса: Мировое господство</span>
+                  <i class="valign right small material-icons">play_circle_filled</i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m2">
+            <div class="card">
+              <div class="br-theme-fontawesome-stars">
+                <select class="rating">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+              <div class="card-image">
+                <img src="https://www.kinopoisk.ru/images/film_big/677768.jpg">
+                <span class="card-title"></span>
+              </div>
+              <div class="card-content">
+                <p>
+                  <b>Год выпуска: </b><a href="http://kinogo.club/filmy_2017/">2017</a><br>
+                  <b>Страна: </b> <a href="http://kinogo.club/amerikanskie_filmy/">США</a><br>
+                  <b>Жанр: </b> <a href="http://kinogo.club/trillery/">Триллер</a>, <a href="http://kinogo.club/kriminal/">Криминал</a><br>
+                  <b>Качество: </b> HDRip<br>
+                  <b>Перевод: </b> Профессиональный (многоголосый)<br>
+                  <b>Продолжительность: </b>01:24:05<br>
+                  <b>Премьера (РФ): </b> 20 января 2017
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="#" class="valign-wrapper">
+                  <span class="valign">Закон ночи</span>
+                  <i class="valign right small material-icons">play_circle_filled</i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m2">
+            <div class="card">
+              <div class="br-theme-fontawesome-stars">
+                <select class="rating">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+              <div class="card-image">
+                <img src="https://www.kinopoisk.ru/images/film_big/690615.jpg">
+                <span class="card-title"></span>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#" class="valign-wrapper">
+                  <span class="valign">Кредо убийцы</span>
+                  <i class="valign right small material-icons">play_circle_filled</i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m2">
+            <div class="card">
+              <div class="br-theme-fontawesome-stars">
+                <select class="rating">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+              <div class="card-image">
+                <img src="https://www.kinopoisk.ru/images/film_big/1007934.jpg">
+                <span class="card-title"></span>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#" class="valign-wrapper">
+                  <span class="valign">Гора 2</span>
+                  <i class="valign right small material-icons">play_circle_filled</i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m2">
+            <div class="card">
+              <div class="br-theme-fontawesome-stars">
+                <select class="rating">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+              <div class="card-image">
+                <img src="https://www.kinopoisk.ru/images/film_big/409600.jpg">
+                <span class="card-title"></span>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#" class="valign-wrapper">
+                  <span class="valign">Доктор Стрэндж</span>
+                  <i class="valign right small material-icons">play_circle_filled</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="row wrapper">
+            <div class="col s12 m2">
+              <div class="card">
+                <div class="br-theme-fontawesome-stars">
+                  <select class="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+                <div class="card-image">
+
+
+                  <img src="http://www.kinonews.ru/insimgs/2016/poster/poster68549_1.jpg">
+                  <span class="card-title"></span>
+                </div>
+                <div class="card-content">
+                  <p class="description">Ксандер Кейдж спустя годы возвращается из добровольного изгнания и попадает в
+                    безумный водоворот
+                    событий. Он собирает команду безбашенных экстремалов, вместе с которыми ему предстоит найти
+                    мощнейшее секретное оружие — «Ящик Пандоры». Действовать нужно быстро: за разработкой охотятся
+                    опасные головорезы. Ставки в смертельной игре повышаются, когда выясняется, что мировые
+                    правительства вовлечены в кровавый заговор.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#" class="valign-wrapper">
+                    <span class="valign">Три икса: Мировое господство</span>
+                    <i class="valign right small material-icons">play_circle_filled</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m2">
+              <div class="card">
+                <div class="br-theme-fontawesome-stars">
+                  <select class="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+                <div class="card-image">
+                  <img src="https://www.kinopoisk.ru/images/film_big/677768.jpg">
+                  <span class="card-title"></span>
+                </div>
+                <div class="card-content">
+                  <p>
+                    <b>Год выпуска: </b><a href="http://kinogo.club/filmy_2017/">2017</a><br>
+                    <b>Страна: </b> <a href="http://kinogo.club/amerikanskie_filmy/">США</a><br>
+                    <b>Жанр: </b> <a href="http://kinogo.club/trillery/">Триллер</a>, <a href="http://kinogo.club/kriminal/">Криминал</a><br>
+                    <b>Качество: </b> HDRip<br>
+                    <b>Перевод: </b> Профессиональный (многоголосый)<br>
+                    <b>Продолжительность: </b>01:24:05<br>
+                    <b>Премьера (РФ): </b> 20 января 2017
+                  </p>
+                </div>
+                <div class="card-action">
+                  <a href="#" class="valign-wrapper">
+                    <span class="valign">Закон ночи</span>
+                    <i class="valign right small material-icons">play_circle_filled</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m2">
+              <div class="card">
+                <div class="br-theme-fontawesome-stars">
+                  <select class="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+                <div class="card-image">
+                  <img src="https://www.kinopoisk.ru/images/film_big/690615.jpg">
+                  <span class="card-title"></span>
+                </div>
+                <div class="card-content">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#" class="valign-wrapper">
+                    <span class="valign">Кредо убийцы</span>
+                    <i class="valign right small material-icons">play_circle_filled</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m2">
+              <div class="card">
+                <div class="br-theme-fontawesome-stars">
+                  <select class="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+                <div class="card-image">
+                  <img src="https://www.kinopoisk.ru/images/film_big/1007934.jpg">
+                  <span class="card-title"></span>
+                </div>
+                <div class="card-content">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#" class="valign-wrapper">
+                    <span class="valign">Гора 2</span>
+                    <i class="valign right small material-icons">play_circle_filled</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m2">
+              <div class="card">
+                <div class="br-theme-fontawesome-stars">
+                  <select class="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+                <div class="card-image">
+                  <img src="https://www.kinopoisk.ru/images/film_big/409600.jpg">
+                  <span class="card-title"></span>
+                </div>
+                <div class="card-content">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#" class="valign-wrapper">
+                    <span class="valign">Доктор Стрэндж</span>
+                    <i class="valign right small material-icons">play_circle_filled</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row wrapper">
+            <div class="col s12 m2">
+              <div class="card">
+                <div class="br-theme-fontawesome-stars">
+                  <select class="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+                <div class="card-image">
+
+
+                  <img src="http://www.kinonews.ru/insimgs/2016/poster/poster68549_1.jpg">
+                  <span class="card-title"></span>
+                </div>
+                <div class="card-content">
+                  <p class="description">Ксандер Кейдж спустя годы возвращается из добровольного изгнания и попадает в
+                    безумный водоворот
+                    событий. Он собирает команду безбашенных экстремалов, вместе с которыми ему предстоит найти
+                    мощнейшее секретное оружие — «Ящик Пандоры». Действовать нужно быстро: за разработкой охотятся
+                    опасные головорезы. Ставки в смертельной игре повышаются, когда выясняется, что мировые
+                    правительства вовлечены в кровавый заговор.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#" class="valign-wrapper">
+                    <span class="valign">Три икса: Мировое господство</span>
+                    <i class="valign right small material-icons">play_circle_filled</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m2">
+              <div class="card">
+                <div class="br-theme-fontawesome-stars">
+                  <select class="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+                <div class="card-image">
+                  <img src="https://www.kinopoisk.ru/images/film_big/677768.jpg">
+                  <span class="card-title"></span>
+                </div>
+                <div class="card-content">
+                  <p>
+                    <b>Год выпуска: </b><a href="http://kinogo.club/filmy_2017/">2017</a><br>
+                    <b>Страна: </b> <a href="http://kinogo.club/amerikanskie_filmy/">США</a><br>
+                    <b>Жанр: </b> <a href="http://kinogo.club/trillery/">Триллер</a>, <a href="http://kinogo.club/kriminal/">Криминал</a><br>
+                    <b>Качество: </b> HDRip<br>
+                    <b>Перевод: </b> Профессиональный (многоголосый)<br>
+                    <b>Продолжительность: </b>01:24:05<br>
+                    <b>Премьера (РФ): </b> 20 января 2017
+                  </p>
+                </div>
+                <div class="card-action">
+                  <a href="#" class="valign-wrapper">
+                    <span class="valign">Закон ночи</span>
+                    <i class="valign right small material-icons">play_circle_filled</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m2">
+              <div class="card">
+                <div class="br-theme-fontawesome-stars">
+                  <select class="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+                <div class="card-image">
+                  <img src="https://www.kinopoisk.ru/images/film_big/690615.jpg">
+                  <span class="card-title"></span>
+                </div>
+                <div class="card-content">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#" class="valign-wrapper">
+                    <span class="valign">Кредо убийцы</span>
+                    <i class="valign right small material-icons">play_circle_filled</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m2">
+              <div class="card">
+                <div class="br-theme-fontawesome-stars">
+                  <select class="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+                <div class="card-image">
+                  <img src="https://www.kinopoisk.ru/images/film_big/1007934.jpg">
+                  <span class="card-title"></span>
+                </div>
+                <div class="card-content">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#" class="valign-wrapper">
+                    <span class="valign">Гора 2</span>
+                    <i class="valign right small material-icons">play_circle_filled</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m2">
+              <div class="card">
+                <div class="br-theme-fontawesome-stars">
+                  <select class="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+                <div class="card-image">
+                  <img src="https://www.kinopoisk.ru/images/film_big/409600.jpg">
+                  <span class="card-title"></span>
+                </div>
+                <div class="card-content">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#" class="valign-wrapper">
+                    <span class="valign">Доктор Стрэндж</span>
+                    <i class="valign right small material-icons">play_circle_filled</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<footer class="page-footer teal">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Company Bio</h5>
+        <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's
+          our full time job. Any amount would help support and continue development on this project and is
+          greatly appreciated.</p>
+
+
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Settings</h5>
+        <ul>
+          <li><a class="white-text" href="#!">Link 1</a></li>
+          <li><a class="white-text" href="#!">Link 2</a></li>
+          <li><a class="white-text" href="#!">Link 3</a></li>
+          <li><a class="white-text" href="#!">Link 4</a></li>
+        </ul>
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Connect</h5>
+        <ul>
+          <li><a class="white-text" href="#!">Link 1</a></li>
+          <li><a class="white-text" href="#!">Link 2</a></li>
+          <li><a class="white-text" href="#!">Link 3</a></li>
+          <li><a class="white-text" href="#!">Link 4</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+    </div>
+  </div>
+</footer>
+
+
+<!--  Scripts-->
+<script src="js/init.js"></script>
+
+</body>
+</html>

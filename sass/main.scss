@@ -1,0 +1,124 @@
+$green: #26a69a;
+body {
+  margin: 0;
+
+  .full-container {
+    margin: 0 20px;
+  }
+
+  .filters {
+    margin-top: 10px;
+
+    .wrapper {
+      margin: 30px 20px;
+    }
+
+    .range-filters > div {
+      margin-bottom: 100px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .list {
+    padding: 20px;
+    column-count: 2;
+
+    li {
+      padding: 2px 0;
+    }
+
+    li input:checked + label {
+      color: $green;
+    }
+  }
+
+  .card .card-image .card-title {
+    position: static;
+    color: black;
+    padding: 10px;
+  }
+
+  .br-wrapper {
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    background: rgba(0, 121, 107, 0.8);
+    padding: 5px 5px;
+    border-radius: 2px 2px 0 0;
+  }
+
+  .card {
+    margin-top: 0;
+    .card-title {
+      display: none;
+    }
+
+    .card-image {
+      max-height: 360px;
+      overflow: hidden;
+      img {
+        border-radius: 0;
+      }
+    }
+
+    .card-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 121, 107, 0.7);
+      padding: 5px 10px;
+      opacity: 0;
+      //transform: translateY(0);
+      //transition: opacity 1s ease 0.2s, transform .5s ease;
+      transition: all 1s ease;
+
+      .description, p {
+        font-size: 14px;
+        color: white;
+        font-weight: normal;
+      }
+    }
+
+    &:hover .card-content {
+      opacity: 1;
+      top: 38px;
+      //transform: translateY(100%);
+    }
+  }
+
+  .valign-wrapper {
+    justify-content: space-between;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  .new-films {
+    .col.m2 {
+      width: 20%;
+    }
+
+    .card .card-action span {
+      height: 22px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
+      margin-right: 0;
+    }
+  }
+
+  .br-theme-fontawesome-stars .br-widget a {
+    font-size: 24px;
+  }
+
+  .carousel.carousel-slider .carousel-fixed-item {
+    bottom: 70px;
+  }
+}
